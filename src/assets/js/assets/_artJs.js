@@ -41,7 +41,7 @@ const botones = document.querySelectorAll(".boton")
 // opción 1
 // forof para recorrer botones
 for(const boton of botones){
-    boton.addEventListener("click", function(){  
+    boton.addEventListener("click", function(e){  
         e.currentTarget.style.border="2px solid red"          
         this.style.backgroundColor="pink"
         boton.style.color="green"
@@ -53,7 +53,7 @@ for(const boton of botones){
 botones.forEach(function(boton){    
     boton.addEventListener("click", function(e){  
         e.currentTarget.style.border="2px solid blue"      
-        this.style.backgroundColor="pink"
+         e.currentTarget.style.backgroundColor="pink"
         boton.style.color="green"
     })
 
@@ -65,12 +65,36 @@ botones.forEach((boton)=>{
     boton.addEventListener("click", (e)=>{
 
         e.currentTarget.style.border="2px solid green"  
-        this.style.backgroundColor="pink"
+         e.currentTarget.style.backgroundColor="pink"
         boton.style.color="green"
 
     })
 
 })
+
+
+// Ejercicio desplegable
+
+const botonesDesplegar = document.querySelectorAll(".botonDesplegar")
+
+// const parrafoADesplegar = document.querySelector(".desplegable")
+
+botonesDesplegar.forEach((item)=>{
+
+    item.addEventListener("click", ()=>{
+
+        // const superior = item.parentElement
+        // const miParrafo = superior.querySelector(".desplegable")
+
+        // parrafoADesplegar.classList.toggle("open")
+
+        const miParrafo = item.previousElementSibling
+
+        miParrafo.classList.toggle("open")
+    })
+})
+
+
 
 
 

@@ -83,6 +83,8 @@ botonesDesplegar.forEach((item)=>{
 
     item.addEventListener("click", ()=>{
 
+        
+
         // const superior = item.parentElement
         // const miParrafo = superior.querySelector(".desplegable")
 
@@ -90,8 +92,25 @@ botonesDesplegar.forEach((item)=>{
 
         const miParrafo = item.previousElementSibling
 
+        
         miParrafo.classList.toggle("open")
+       
+        
+        
+
+        // if(miParrafo.classList.contains("open")){
+
+        //     item.textContent="Leer menos"
+        // }
+
+        // else{
+        //     item.textContent="Leer más"
+        // }
+
+        item.textContent = miParrafo.classList.contains("open") ? "Leer menos" : "Leer más"
+        // console.log(item)
     })
+    
 })
 
 

@@ -34,7 +34,7 @@ elementoHtmlBoton.addEventListener("click", function(event){
 
 
 // recojo todos los elementos html que tengan la clase "boton"
-// La constante en la que los recojo cuarda una colección de items
+// La constante en la que los recojo guarda una colección de items
 const botones = document.querySelectorAll(".boton")
 // const botones = document.getElementsByClassName("boton")
 

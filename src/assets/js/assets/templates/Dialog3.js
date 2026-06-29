@@ -5,8 +5,8 @@ export default function Dialog3() {
     <div class="dialog">
 
         <p> Adios Hola Mundo </p>
-        <button class ="boton">SI</button>
-        <button class ="boton">NO</button>
+        <button class ="boton" data-modal-close>ACEPTAR</button>
+        <button class ="boton" data-modal-close>CERRAR</button>
 
         <p> BY NIKO </p>
     </div>

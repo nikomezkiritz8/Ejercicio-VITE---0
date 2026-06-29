@@ -20,7 +20,24 @@ export default function modal(template){
 
        
     const $btnClose = $modal.querySelector(".modal--btn-close");
+
+    const $modalContainer = $modal.querySelector(".modal__container");
     $btnClose.addEventListener("click", () => $modal.remove());
+
+    $modal.addEventListener("click", (event) => {
+
+        if(event.target.closest("[data-modal-close]")){
+
+            $modal.remove()
+        }
+
+        if(!$modalContainer.contains(event.target)){
+
+            $modal.remove();
+
+        }
+    });
+
     return $modal;
 
 }

@@ -11,6 +11,7 @@ import modal from "./assets/_modal.js";
 import Dialog from "./assets/templates/Dialog.js";
 import Dialog2 from "./assets/templates/Dialog2.js";
 import Dialog3 from "./assets/templates/Dialog3.js";
+import validationForm from "./assets/_validationForm.js";
 
 //
 const $btnOpenModal = document.querySelector("#openModal1");
@@ -27,3 +28,6 @@ const $btnOpenModal3 = document.querySelector("#openModal3");
 $btnOpenModal3.addEventListener("click", () => {
   document.body.appendChild(modal(Dialog3()));
 });
+
+
+validationForm();
